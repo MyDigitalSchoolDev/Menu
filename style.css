@@ -1,3 +1,9 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .header{
     width: 100%;
     height: 60px;
@@ -71,3 +77,91 @@ ul{
     
     }
 }
+
+
+.fond-section{
+    background-color: #333333;
+    height: 100vh;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+
+/* Texte défilant */
+.messagedefilant {
+    display: block;
+    margin: 40px auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    height: 100px;
+  }
+   
+  .messagedefilant div {
+    position: absolute;
+    min-width: 100%; /* au minimum la largeur du conteneur */
+  }
+   
+  .messagedefilant div span, 
+  .messagedefilant div:after {
+    position: relative;
+    display: inline-block;
+ 
+    white-space: nowrap;
+    top:0;
+    font-size: 80px;
+    -webkit-text-stroke: 1px white;
+  }
+  .messagedefilantInverse div span, 
+  .messagedefilantInverse div:after {
+    position: relative;
+    display: inline-block;
+ 
+    white-space: nowrap;
+    top:0;
+    font-size: 80px;
+    -webkit-text-stroke: 1px white;
+  }
+   
+  .messagedefilant div span {
+    animation: defilement 35s infinite linear;
+  
+  }
+
+  .messagedefilant div span:hover {
+    animation: defilement 55s infinite linear;
+    color: white;
+  }
+  .messagedefilantInverse div span:hover {
+    animation: defilementInverse 35s infinite linear;
+    color: white;
+  }
+
+ 
+   
+  @keyframes defilement {
+    0% { margin-left: 0; }
+    100% { margin-left: -100%; }
+  }
+   
+  @keyframes defilement2 {
+    0% { margin-left: 100%; }
+    100% { margin-left: 0%; }
+  }
+
+  .messagedefilantInverse  div span{
+    animation: defilementInverse 20s infinite linear;
+
+  }
+
+  @keyframes defilementInverse {
+    0% { margin-left: -100%; }
+    100% { margin-left: 0%; }
+  }
+   
+  @keyframes defilement2Inverse {
+    0% { margin-left: 0%; }
+    100% { margin-left: -100%; }
+  }
